@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="module" defer src="./main.js"></script>
+    <script src="./carrito.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/"></a>Home</li>
+                <li class="div-cart-counter"><i class='bx bx-shopping-bag'id='cart-icon'></i><p class="cart-counter" id="cart-counter">0</p></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main">
+
+        <div class="main-section">
+
+            <div>
+                <h1 class="main-section-h1">Hype-Sneaker</h1>
+            </div>
+            <div>
+                <img class="main-image" src="./imgs/mainImage.png">
+            </div>
+
+        </div>
+
+        <div class="cards-container" id="root">
+
+        </div>
+        <div class="cart">
+                <h2 class="cart-titulo">Carrito</h2>
+
+                <div class="cart-content">
+                    <p class="cart-empty">Parece que el carrito esta vacio, agregale algo!</p>
+                
+                </div>
+
+                <!-- Total -->
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+
+                <!-- Buy Button -->
+                <button type="button" class="btn-buy">Buy now!</button>
+
+                <!-- Cart close -->
+                <i class='bx bx-x' id="cart-close"></i>
+        </div>
+
+        <div class="footer">
+            <p>Trabajo Practico JS UNTREF</p>
+            <p>Valentin Schiaffino</p>
+        </div>
+        
+    </main>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
