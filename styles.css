@@ -97,7 +97,7 @@ ul li:hover {
   width: 70%;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   column-gap: 1rem;
   row-gap: 1rem;
   justify-content: center;
@@ -292,4 +292,42 @@ ul li:hover {
     align-items: center;
     background-color: var(--white-color);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .main-section{
+        width: 100vw;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-section-h1{
+        font-size: 3rem;
+    }
+    
+    .main-image{
+        width: 400px;
+        margin-top: 5rem;
+    }
+    
+}
+
+@media screen and (max-width: 680px) {
+    
+    .cards-container {
+        width: 50%;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        column-gap: 1rem;
+        row-gap: 1rem;
+        justify-content: center;
+        margin-bottom: 5rem;
+        
+      }
+
 }
