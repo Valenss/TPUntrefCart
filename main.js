@@ -143,6 +143,25 @@ function addCartClicked(event) {
   // const productToSet = {'title': resultado.title,'price': resultado.price ,'image': resultado.thumbnail, 'description': resultado.description}
   let product = new Producto(resultado.title, resultado.price, resultado.thumbnail, resultado.description, resultado.id, 1)
 
+  var cartShopBox = document.createElement("div");
+  cartShopBox.classList.add('cart-box')
+  var cartItems = document.getElementsByClassName("cart-content")[0];
+  var cartItemsDescription = cartItems.getElementsByClassName("cart-product-description");
+  
+  for (var i = 0; i < cartItemsDescription.length; i++) {
+    if(cartItemsDescription[i].innerText == resultado.description){
+      swal({
+        title: "Error",
+        text: "Este producto ya fue agregado al carrito!",
+        icon: "warning",
+        button: "Volver",
+      });
+      return;
+    }
+  }
+    
+      
+
   // console.log(product)
   localStorage.setItem(resultado.title + resultado.description,JSON.stringify(product))
 
@@ -179,17 +198,18 @@ function addProductToCart(title, price, image, description, quantity, id) {
   cartShopBox.classList.add('cart-box')
   var cartItems = document.getElementsByClassName("cart-content")[0];
   var cartItemsDescription = cartItems.getElementsByClassName("cart-product-description");
-  for (var i = 0; i < cartItemsDescription.length; i++) {
-      if(cartItemsDescription[i].innerText == description){
-        swal({
-          title: "Error",
-          text: "Este producto ya fue agregado al carrito!",
-          icon: "warning",
-          button: "Volver",
-        });
-        return;
-      }
-}
+  // for (var i = 0; i < cartItemsDescription.length; i++) {
+  //     if(cartItemsDescription[i].innerText == description){
+  //       swal({
+  //         title: "Error",
+  //         text: "Este producto ya fue agregado al carrito!",
+  //         icon: "warning",
+  //         button: "Volver",
+  //       });
+
+  //       return;
+      // }
+// }
 
 
   var cartBoxContent = `
